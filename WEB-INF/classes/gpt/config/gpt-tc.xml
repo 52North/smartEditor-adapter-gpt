@@ -42,7 +42,7 @@
   -->
   
   <!-- uncomment if using geoportal version 1.1.1 -->
-  <!-- possible values are: 'dialog', 'iframe' and 'externalWindow'
+  <!-- possible values are: 'dialog', 'iframe' and 'externalWindow' -->
   <!--
   <parameter key="sdisuite.integrationType" value="dialog"/>
   -->
