@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- gpt-tc.xml -->
+<parameters>
+  <!-- set value="true" if you are willing to integrate add-ons for ArcGIS for INSPIRE, please see instructions for this --> 
+  <parameter key="sdisuite.enabled" value="true"/> 
+  <!-- the link call back servlet allows for intercepting the resource link actions -->
+  <!--
+  <parameter key="sdisuite.useLinkCallbackServlet" value="false"/>
+  -->
+  
+  <!-- the concrete implementation of the abstract class com.esri.gpt.sdisuite.IntegrationContext -->
+  <parameter key="sdisuite.integrationContextClass" value="de.conterra.suite.security.portal.gpx.EmbeddedSAMLTokenIntegrationContext"/>
+  
+  <!-- URLs TO sdi.suite applications -->
+  <!-- URL of the sdi.suite web authentication service (WAS), https recommended -->
+  <!--
+  <parameter key="sdisuite.authenticationServiceUrl" value=""/>
+  -->
+  <!-- URL of smartEditor-->
+  <parameter key="sdisuite.smartEditorUrl" value="http://[host]/smartEditor/startEditor.do"/>
+  <!-- URL entrypoint for starting smartEditor with an exisiting document from CSW discovery -->
+  <parameter key="sdisuite.smartEditorStartWithUrl" value="http://[host]/smartEditor/startWithExternalResource.do"/>
+  <!-- URL to the securityManager application (web frontend), used to access secman/licMan from geoportal having SSO enabled (admin) -->
+  <!--
+  <parameter key="sdisuite.securityManagerUrl" value=""/>
+  -->
+  <!-- URL to service based gateway creation application, currently not used -->
+  <!--
+  <parameter key="sdisuite.gatewaySSOUrl" value=""/>
+  -->
+  <!-- URL to sdi.suite serviceMonitor -->
+  <!--
+  <parameter key="sdisuite.serviceMonitorServer" value=""/>
+  -->
+  <!-- URL to sdi.suite serviceMonitor (web frontend) --> 
+  <!--
+  <parameter key="sdisuite.serviceMonitorUrl" value=""/>
+  -->
+  <!-- URL to the securityManager application (web frontend), used to access secman/licMan from geoportal having SSO enabled (standard user) -->
+  <!--
+  <parameter key="sdisuite.licensesUrl" value=""/>
+  -->
+  
+  <!-- uncomment if using geoportal version 1.1.1 -->
+  <!-- possible values are: 'dialog', 'iframe' and 'externalWindow' -->
+  <!-- use 'iframe' to enable buttom in GPT menu -->
+  <!--
+  <parameter key="sdisuite.integrationType" value="dialog"/>
+  -->
+  
+  <!-- technical configuration to provide a keystore and a key that can be used to internally create and verify a saml token -->
+  <!-- this is necessary to verify the user's identity when using the smartEditor and publishing metadata to the geoportal CSW-T -->
+  <parameter key="sdisuite.keystore.location" value="/.keystore"/>
+  <!-- the password to access the keystore -->
+  <parameter key="sdisuite.keystore.passwd" value="changeit"/>
+  <!-- the name of the key within the keystore to sign saml token assertion (defaults to 'gpt-security' -->
+  <parameter key="sdisuite.keystore.key.alias" value="gpt-security"/>
+  <!-- the password to access the key within the keystore -->
+  <parameter key="sdisuite.keystore.key.passwd" value="changeit"/>
+  
+  <!-- set to true if you want to transfer sdi.suite securityManager assigned roles to the geoportal user role map -->
+  <!--
+  <parameter key="sdisuite.saml.roles.transfer" value="true"/>
+  -->
+</parameters>
