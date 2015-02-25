@@ -43,16 +43,17 @@
   
   <!-- uncomment if using geoportal version 1.1.1 -->
   <!-- possible values are: 'dialog', 'iframe' and 'externalWindow' -->
+  <!-- use 'iframe' to enable buttom in GPT menu -->
   <!--
   <parameter key="sdisuite.integrationType" value="dialog"/>
   -->
   
   <!-- technical configuration to provide a keystore and a key that can be used to internally create and verify a saml token -->
   <!-- this is necessary to verify the user's identity when using the smartEditor and publishing metadata to the geoportal CSW-T -->
-  <parameter key="sdisuite.keystore.location" value="/gpt/config/keystore.jks"/>
+  <parameter key="sdisuite.keystore.location" value="/.keystore"/>
   <!-- the password to access the keystore -->
   <parameter key="sdisuite.keystore.passwd" value="changeit"/>
-  <!-- the name of the key within the keystore to sign saml token assertion (defaults to 'ct-security' -->
+  <!-- the name of the key within the keystore to sign saml token assertion (defaults to 'gpt-security' -->
   <parameter key="sdisuite.keystore.key.alias" value="gpt-security"/>
   <!-- the password to access the key within the keystore -->
   <parameter key="sdisuite.keystore.key.passwd" value="changeit"/>
