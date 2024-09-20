@@ -1,3 +1,7 @@
+# ARCHIVED
+
+This project is no longer maintained and will not receive any further updates. If you plan to continue using it, please be aware that future security issues will not be addressed.
+
 # smartEditor Adapter for Esri Geoportal Server
 
 [smartEditor](http://52north.org/communities/metadata-management/smarteditor/project) is a powerful editor for ISO 19139 and INSPIRE compliant metadata. It can be connected to the 8Esri Geoportal Server]() to create, manage and, in particular, edit metadata documents. 
